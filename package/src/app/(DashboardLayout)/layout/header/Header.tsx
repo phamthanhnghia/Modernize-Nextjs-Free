@@ -7,10 +7,10 @@ import Profile from './Profile';
 import { IconBellRinging, IconMenu } from '@tabler/icons-react';
 
 interface ItemType {
-  toggleMobileSidebar:  (event: React.MouseEvent<HTMLElement>) => void;
+  toggleSidebar: () => void;
 }
 
-const Header = ({toggleMobileSidebar}: ItemType) => {
+const Header = ({ toggleSidebar }: ItemType) => {
 
   // const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
   // const lgDown = useMediaQuery((theme) => theme.breakpoints.down('lg'));
@@ -35,14 +35,8 @@ const Header = ({toggleMobileSidebar}: ItemType) => {
       <ToolbarStyled>
         <IconButton
           color="inherit"
-          aria-label="menu"
-          onClick={toggleMobileSidebar}
-          sx={{
-            display: {
-              lg: "none",
-              xs: "inline",
-            },
-          }}
+          aria-label="toggle navigation"
+          onClick={toggleSidebar}
         >
           <IconMenu width="20" height="20" />
         </IconButton>

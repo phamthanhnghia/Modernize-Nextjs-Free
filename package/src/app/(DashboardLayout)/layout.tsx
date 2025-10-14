@@ -1,5 +1,5 @@
 "use client";
-import { styled, Container, Box } from "@mui/material";
+import { styled, Container, Box, useMediaQuery } from "@mui/material";
 import React, { useState } from "react";
 import Header from "@/app/(DashboardLayout)/layout/header/Header";
 import Sidebar from "@/app/(DashboardLayout)/layout/sidebar/Sidebar";
@@ -33,6 +33,15 @@ export default function RootLayout({
 }) {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const lgUp = useMediaQuery((theme: any) => theme.breakpoints.up("lg"));
+
+  const handleSidebarToggle = () => {
+    if (lgUp) {
+      setSidebarOpen((prev) => !prev);
+    } else {
+      setMobileSidebarOpen(true);
+    }
+  };
   return (
     <MainWrapper className="mainwrapper">
       {/* ------------------------------------------- */}
@@ -50,7 +59,7 @@ export default function RootLayout({
         {/* ------------------------------------------- */}
         {/* Header */}
         {/* ------------------------------------------- */}
-        <Header toggleMobileSidebar={() => setMobileSidebarOpen(true)} />
+        <Header toggleSidebar={handleSidebarToggle} />
         {/* ------------------------------------------- */}
         {/* PageContent */}
         {/* ------------------------------------------- */}

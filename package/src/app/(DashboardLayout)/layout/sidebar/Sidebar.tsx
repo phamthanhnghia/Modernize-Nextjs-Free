@@ -35,44 +35,47 @@ const MSidebar = ({
     return (
       <Box
         sx={{
-          width: sidebarWidth,
+          width: isSidebarOpen ? sidebarWidth : 0,
           flexShrink: 0,
+          transition: 'width 0.3s ease',
         }}
       >
         {/* ------------------------------------------- */}
         {/* Sidebar for desktop */}
         {/* ------------------------------------------- */}
-        <Drawer
-          anchor="left"
-          open={isSidebarOpen}
-          variant="permanent"
-          slotProps={{
-            paper: {
-              sx: {
-                boxSizing: "border-box",
-                ...scrollbarStyles,
-                width: sidebarWidth,
-              },
-            }
-          }}
-        >
-          {/* ------------------------------------------- */}
-          {/* Sidebar Box */}
-          {/* ------------------------------------------- */}
-          <Box
-            sx={{
-              height: "100%",
+        {isSidebarOpen && (
+          <Drawer
+            anchor="left"
+            open
+            variant="permanent"
+            slotProps={{
+              paper: {
+                sx: {
+                  boxSizing: "border-box",
+                  ...scrollbarStyles,
+                  width: sidebarWidth,
+                },
+              }
             }}
           >
+            {/* ------------------------------------------- */}
+            {/* Sidebar Box */}
+            {/* ------------------------------------------- */}
+            <Box
+              sx={{
+                height: "100%",
+              }}
+            >
 
-            <Box>
-              {/* ------------------------------------------- */}
-              {/* Sidebar Items */}
-              {/* ------------------------------------------- */}
-              <SidebarItems />
+              <Box>
+                {/* ------------------------------------------- */}
+                {/* Sidebar Items */}
+                {/* ------------------------------------------- */}
+                <SidebarItems />
+              </Box>
             </Box>
-          </Box>
-        </Drawer>
+          </Drawer>
+        )}
       </Box >
     );
   }
