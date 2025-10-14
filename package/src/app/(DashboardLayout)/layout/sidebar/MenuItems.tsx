@@ -1,9 +1,11 @@
 import {
   IconAperture,
   IconCopy,
+  IconFileInfo,
   IconLayoutDashboard,
   IconLogin,
   IconMoodHappy,
+  IconNotes,
   IconTypography,
   IconUserPlus,
 } from "@tabler/icons-react";
@@ -21,6 +23,68 @@ const Menuitems = [
     title: "Dashboard",
     icon: IconLayoutDashboard,
     href: "/",
+  },
+  {
+    navlabel: true,
+    subheader: "PAGES",
+  },
+  {
+    id: uniqueId(),
+    title: "Pages",
+    icon: IconNotes,
+    children: [
+      {
+        id: uniqueId(),
+        title: "About Us",
+        href: "/pages/about-us",
+        icon: IconFileInfo,
+      },
+      {
+        id: uniqueId(),
+        title: "Services",
+        href: "/pages/services",
+      },
+      {
+        id: uniqueId(),
+        title: "Pricing",
+        href: "/pages/pricing",
+      },
+      {
+        id: uniqueId(),
+        title: "FAQs",
+        href: "/pages/faqs",
+      },
+      {
+        id: uniqueId(),
+        title: "Blog",
+        href: "/pages/blog",
+      },
+      {
+        id: uniqueId(),
+        title: "Testimonials",
+        href: "/pages/testimonials",
+      },
+      {
+        id: uniqueId(),
+        title: "Portfolio",
+        href: "/pages/portfolio",
+      },
+      {
+        id: uniqueId(),
+        title: "Careers",
+        href: "/pages/careers",
+      },
+      {
+        id: uniqueId(),
+        title: "Contact",
+        href: "/pages/contact",
+      },
+      {
+        id: uniqueId(),
+        title: "Legal",
+        href: "/pages/legal",
+      },
+    ],
   },
   {
     navlabel: true,
