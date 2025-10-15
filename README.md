@@ -62,6 +62,9 @@ npm run build
 - Login & Signup  
 - Typography  
 - Sample Layout  
+- ERP Settings  
+- User List  
+- Create User  
 
 ---
 
@@ -71,7 +74,7 @@ npm run build
 | Aspect           | Details                                                 |
 |------------------|---------------------------------------------------------|
 | Framework        | Next.js (v15), React, TypeScript, Material UI (v7)      |
-| Pages Included   | Dashboard, Login/Register, Typography, Sample           |
+| Pages Included   | Dashboard, Login/Register, Typography, Sample, ERP Settings, User List, Create User |
 | Design           | Responsive, MUI-styled, clean and modern                |
 | License          | MIT – Free for personal and commercial use              |
 | Getting Started  | Clone → npm install → npm run dev → npm run build       |
