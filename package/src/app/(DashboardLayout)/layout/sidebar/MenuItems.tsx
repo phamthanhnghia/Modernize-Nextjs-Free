@@ -6,7 +6,11 @@ import {
   IconLogin,
   IconMoodHappy,
   IconNotes,
+  IconSettings,
   IconTypography,
+  IconUsers,
+  IconIdBadge,
+  IconUser,
   IconUserPlus,
 } from "@tabler/icons-react";
 
@@ -66,6 +70,17 @@ const Menuitems = [
       },
       {
         id: uniqueId(),
+        title: "Profile",
+        href: "/pages/profile",
+      },
+      {
+        id: uniqueId(),
+        title: "ERP Settings",
+        href: "/pages/erp-settings",
+        icon: IconSettings,
+      },
+      {
+        id: uniqueId(),
         title: "Portfolio",
         href: "/pages/portfolio",
       },
@@ -83,6 +98,41 @@ const Menuitems = [
         id: uniqueId(),
         title: "Legal",
         href: "/pages/legal",
+      },
+    ],
+  },
+  {
+    navlabel: true,
+    subheader: "USER",
+  },
+  {
+    id: uniqueId(),
+    title: "User",
+    icon: IconUser,
+    children: [
+      {
+        id: uniqueId(),
+        title: "Profile",
+        href: "/pages/profile",
+        icon: IconIdBadge,
+      },
+      {
+        id: uniqueId(),
+        title: "ERP Settings",
+        href: "/pages/erp-settings",
+        icon: IconSettings,
+      },
+      {
+        id: uniqueId(),
+        title: "List",
+        href: "/pages/list",
+        icon: IconUsers,
+      },
+      {
+        id: uniqueId(),
+        title: "Create User",
+        href: "/pages/create-user",
+        icon: IconUserPlus,
       },
     ],
   },
