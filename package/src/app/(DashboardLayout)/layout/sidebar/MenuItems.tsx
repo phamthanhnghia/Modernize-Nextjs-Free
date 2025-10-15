@@ -8,6 +8,7 @@ import {
   IconNotes,
   IconSettings,
   IconTypography,
+  IconTable,
   IconUsers,
   IconIdBadge,
   IconUser,
@@ -145,6 +146,12 @@ const Menuitems = [
     title: "Typography",
     icon: IconTypography,
     href: "/utilities/typography",
+  },
+  {
+    id: uniqueId(),
+    title: "Table",
+    icon: IconTable,
+    href: "/utilities/table",
   },
   {
     id: uniqueId(),

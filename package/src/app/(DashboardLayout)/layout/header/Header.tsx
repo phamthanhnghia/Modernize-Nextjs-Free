@@ -56,6 +56,9 @@ const Header = ({ toggleSidebar }: ItemType) => {
         </IconButton>
         <Box flexGrow={1} />
         <Stack spacing={1} direction="row" alignItems="center">
+          <Button variant="outlined" component={Link} href="/pages/blog" disableElevation color="primary">
+            Blog
+          </Button>
           <Button variant="contained" component={Link} href="/authentication/login"   disableElevation color="primary" >
             Login
           </Button>
